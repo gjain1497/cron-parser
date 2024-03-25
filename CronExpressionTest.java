@@ -7,43 +7,6 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertArrayEquals;
 
 public class CronExpressionTest {
-
-//    @Test
-//    public void testMinute() throws Exception {
-//        CronExpression cp = new CronExpression("*/15 0 1,15 * 1-5", "/usr/bin/find");
-//
-//        List<Integer> expected = Arrays.asList(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//
-//        System.out.println(expected);
-//        System.out.println(cp.getMinutes());
-//
-//        assertArrayEquals(expected.toArray(), cp.getMinutes().toArray()); // Convert List<Integer> to int[]
-//    }
-//
-//
-//    @Test
-//    public void testHour() throws Exception {
-//        CronExpression cp = new CronExpression("*/15 0 1,15 * 1-5", "/usr/bin/find");
-//
-//        List<Integer> expected = Arrays.asList(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//        assertArrayEquals(expected.toArray(), cp.getHours().toArray());
-//    }
-//
-//    @Test
-//    public void testDayOfMonth() throws Exception {
-//        CronExpression cp = new CronExpression("*/15 0 1,15 * 1-5", "/usr/bin/find");
-//
-//        List<Integer> expected = Arrays.asList(0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
-//        assertArrayEquals(expected.toArray(), cp.getDayOfMonth().toArray());
-//    }
-//    @Test
-//    public void testDayOfMonth2() throws Exception {
-//        CronExpression cp = new CronExpression("*/15 0 1,15 * 1-5", "/usr/bin/find");
-//
-//        // Failing test case - incorrect day of month
-//        List<Integer> expected = Arrays.asList(0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//        assertArrayEquals(expected.toArray(), cp.getDayOfMonth().toArray());
-//    }
     @Test
     public void testValidCronExpression() throws Exception {
         String input = "*/15 0 1,15 * 1-5";
@@ -59,7 +22,7 @@ public class CronExpressionTest {
         assertArrayEquals(expectedHours.toArray(), cp.getHours().toArray());
 
         // Test day of month parsing
-        List<Integer> expectedDayOfMonth = Arrays.asList(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+        List<Integer> expectedDayOfMonth = Arrays.asList(0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         assertArrayEquals(expectedDayOfMonth.toArray(), cp.getDayOfMonth().toArray());
 
         // Test month parsing
@@ -67,7 +30,7 @@ public class CronExpressionTest {
         assertArrayEquals(expectedMonth.toArray(), cp.getMonth().toArray());
 
         // Test day of week parsing
-        List<Integer> expectedDayOfWeek = Arrays.asList(0, 1, 1, 1, 1, 1, 1);
+        List<Integer> expectedDayOfWeek = Arrays.asList(0, 1, 1, 1, 1, 1, 0);
         assertArrayEquals(expectedDayOfWeek.toArray(), cp.getDayOfWeek().toArray());
     }
     @Test(expected = Exception.class)

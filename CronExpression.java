@@ -58,14 +58,14 @@ public class CronExpression {
 
 
     public boolean processCronString(String cronString) {
-        String[] vec = cronString.split(" ");
+        String[] list = cronString.split(" ");
 
-        if (vec.length == 5) {
-            String currMinute = vec[0];
-            String currHour = vec[1];
-            String currDayOfMonth = vec[2];
-            String currMonth = vec[3];
-            String currDayOfWeek = vec[4];
+        if (list.length == 5) {
+            String currMinute = list[0];
+            String currHour = list[1];
+            String currDayOfMonth = list[2];
+            String currMonth = list[3];
+            String currDayOfWeek = list[4];
 
             ParseMinute parseMinute = new ParseMinute();
             ParseHour parseHour = new ParseHour();
