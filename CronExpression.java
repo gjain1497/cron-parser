@@ -3,6 +3,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+
 public class CronExpression {
 
     private List<Integer> minute;
@@ -35,7 +36,7 @@ public class CronExpression {
         return this.dayOfWeek;
     }
 
-    public CronExpression(String input, String command) throws Exception {
+    public CronExpression(String input, String command) throws Exception{
         initialiseList();
 
         boolean isValid = processCronString(input);
@@ -53,11 +54,10 @@ public class CronExpression {
         dayOfMonth = new ArrayList<>(Collections.nCopies(Constants.endLimitDayOfMonth, 0));
         month = new ArrayList<>(Collections.nCopies(Constants.endLimitMonth, 0));
         dayOfWeek = new ArrayList<>(Collections.nCopies(Constants.endLimitDayOfWeek, 0));
-        year = new ArrayList<>(Collections.nCopies(Constants.endLimitYear, 0));
     }
 
 
-    private boolean processCronString(String cronString) {
+    public boolean processCronString(String cronString) {
         String[] vec = cronString.split(" ");
 
         if (vec.length == 5) {

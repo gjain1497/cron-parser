@@ -4,10 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 public class CronExpressionTest {
 
-    @Test
+//    @Test
 //    public void testMinute() throws Exception {
 //        CronExpression cp = new CronExpression("*/15 0 1,15 * 1-5", "/usr/bin/find");
 //
@@ -43,6 +44,7 @@ public class CronExpressionTest {
 //        List<Integer> expected = Arrays.asList(0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 //        assertArrayEquals(expected.toArray(), cp.getDayOfMonth().toArray());
 //    }
+    @Test
     public void testValidCronExpression() throws Exception {
         String input = "*/15 0 1,15 * 1-5";
         String command = "/usr/bin/find";

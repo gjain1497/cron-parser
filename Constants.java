@@ -10,7 +10,4 @@ public class Constants {
     public static final int startLimitDayOfWeek = 0;
     public static final int endLimitDayOfWeek = 7;
 
-    public static final int startLimitYear = 0;
-    public static final int endLimitYear = 25;
-
 }

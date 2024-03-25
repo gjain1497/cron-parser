@@ -1,4 +1,4 @@
-package util.src;
+package util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +37,9 @@ public class Util {
             tempData.add(Integer.parseInt(val));
         } else if (val.contains("-")) {
             String[] data = val.split("-"); //1,10 //Mon-Tue, Thu-Fri
+            if(data.length > 2){
+                throw new Exception("Cannot send more than start range and end range");
+            }
 
             int startVal = Integer.parseInt(data[0]); //start -Mon , end - Thurs //start = 4, end = 1
             int endVal = Integer.parseInt(data[1]);
