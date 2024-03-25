@@ -10,12 +10,12 @@ This Cron Parser is coded in Java and JUnit (Maven) is used for Unit Testing.
 4. Then we will run it using this command: `java Main "2-5,7/3 1 * * 0-4 /usr/bin/find"`.
 
 ## Output
-minute        0 15 30 45
-hours         0
-day of month  1 15
-month         1 2 3 4 5 6 7 8 9 10 11 12
-day of week   1 2 3 4 5
-command       /usr/bin/find
+1. minute        2 3 4 5 7 10 13 16 19 22 25 28 31 34 37 40 43 46 49 52 55 58 
+2. hours         1 
+3. day of month  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+4. month         1 2 3 4 5 6 7 8 9 10 11 12 
+5. day of week   0 1 2 3 4 
+6. command       /usr/bin/find
 
 ## How to Run the Test File
 
