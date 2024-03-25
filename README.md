@@ -10,7 +10,6 @@ This Cron Parser is coded in Java and JUnit (Maven) is used for Unit Testing.
 4. Then we will run it using this command: `java Main "2-5,7/3 1 * * 0-4 /usr/bin/find"`.
 
 ## Output
-html
 <div id="output" style="position: relative;">
   <pre>
 minute              2 3 4 5 7 10 13 16 19 22 25 28 31 34 37 40 43 46 49 52 55 58 
