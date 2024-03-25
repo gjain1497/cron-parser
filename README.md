@@ -23,15 +23,6 @@ command             /usr/bin/find
   <button onclick="copyOutput()">Copy</button>
 </div>
 
-<script>
-  function copyOutput() {
-    var outputElement = document.getElementById('output');
-    var textToCopy = outputElement.innerText;
-    navigator.clipboard.writeText(textToCopy);
-    alert('Copied:\n' + textToCopy);
-  }
-</script>
-
 ## How to Run the Test File
 
 1. Build the test file with this command in terminal: `javac CronExpressionTest.java`.
